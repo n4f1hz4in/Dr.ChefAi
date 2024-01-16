@@ -1,0 +1,61 @@
+{% load static %}
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign In</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="form">
+        <span><a href="./index2.html">&times;</a></span>
+        <div class="image">
+            <img src="{% static 'img/logo_2_white.png'%}" alt="">
+        </div>
+        <h4>Login </h4>
+        <br>
+        <!-- <div class="icon">
+            <a href="#">
+            <input type="image" src="{% static 'img/icons8-google-60.png'%}" value="" width="30px" height="30px">
+        </a>
+            <input type="image" src="{% static 'img/icons8-windows-11-48.png'%}" value="" width="30px" height="30px">
+            <input type="image" src="{% static 'img/icons8-github-94.png'%}" value="" width="30px" height="30px">
+        </div> -->
+        <br>
+        <center>
+            <p style="color:green;">{{msg}}</p>
+        </center>
+        <form action="{% url 'logindata' %}" method="post">
+            {% csrf_token %}
+        <div class="input">
+            <div class="inputBox">
+                <label >Email</label>
+                <input type="email" placeholder="email" name="email" required autofocus autocomplete="off">
+            </div>
+            <div class="inputBox">
+                <label >Password</label>
+                <input type="password" name="password" placeholder="....." required autofocus autocomplete="off">
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Sign in">
+            </div>
+            <p class="forget">Forget Password ? <a href="{% url 'reset_password' %}">Click Here</a></p>
+            <a href="{% url 'regPage' %}" style="text-decoration: none;">
+            <p class="inputBox" style="color: #fff;">Register Now!</p>
+            </a>
+        </div>
+    </form>
+        <!-- <div class="register">
+            <div class="container">
+                <i class="fas fa-user-plus fa-5x"></i>
+                <h2>Hello,friend!</h2>
+                <p>Enter your personal details and start journey with us</p>
+                <button>Register <i class="fas fa-arrow-circle-right"></i></button>
+            </div>
+        </div>   -->
+    </div>
+    
+</body>
+</html>

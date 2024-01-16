@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reg.css' %}">
+</head>
+<body>
+    <div class="form">
+        <span><a href="{% url 'index' %}">&times;</a></span>
+        <div class="image">
+            <img src="{% static 'img/logo_2_white.png'%}" alt="">
+        </div>
+        <h4>SignUp</h4>
+        <br>
+        <!-- <div class="icon">
+            <input type="image" src="{% static 'img/icons8-google-60.png' %}" value="" width="30px" height="30px"><a href="https://www.google.com/"></a>
+            <input type="image" src="{% static 'img/icons8-windows-11-48.png'%}" value="" width="30px" height="30px">
+            <input type="image" src="{% static 'img/icons8-github-94.png'%}" value="" width="30px" height="30px">
+        </div>
+        <br> -->
+        <center>
+        
+            <p style="color: red;">{{msg}}</p>
+        </center>
+        <form action="{% url 'regdata' %}" method="post" >
+            {% csrf_token %}
+        <div class="input">
+            <div class="inputBox">
+                <label >Username</label>
+                <input type="text" name="uname" placeholder="name"  autofocus autocomplete="off">
+            </div>
+            <div class="inputBox">
+                <label >Email </label>
+                <input type="email" name="email" placeholder="....."  autocomplete="off">
+            </div>
+            <div class="inputBox">
+                <label >Password</label>
+                <input type="password" name="password" placeholder="....."  autocomplete="off">
+            </div>
+            <div class="inputBox">
+                <label >Confirm Password</label>
+                <input type="password" name="cpassword" placeholder="....."  autocomplete="off"> 
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="SUBMIT">
+            </div>
+            <p class="forget"><a href="{% url 'loginPage' %}">Login</a></p>
+        </div>
+    </form>
+        <!-- <div class="register">
+            <div class="container">
+                <i class="fas fa-user-plus fa-5x"></i>
+                <h2>Hello,friend!</h2>
+                <p>Enter your personal details and start journey with us</p>
+                <button>Register <i class="fas fa-arrow-circle-right"></i></button>
+            </div>
+        </div>   -->
+    </div>
+    
+</body>
+</html>

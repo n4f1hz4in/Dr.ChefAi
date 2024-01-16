@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dr ChefAi</title>
+  <!-- plugins:css -->
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"> -->
+
+  <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css' %}">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon_icon.jpg' %}">
+
+  <!-- <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.base.css"> -->
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <!-- <link rel="stylesheet" href="../assets/vendors/flag-icon-css/css/flag-icon.min.css"> -->
+  <!-- <link rel="stylesheet" href="../assets/vendors/jvectormap/jquery-jvectormap.css"> -->
+  <!-- End plugin css for this page -->
+  <!-- Layout styles -->
+  <link rel="stylesheet" href="{% static 'css1/demo/style.css' %}">
+  <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+  <!-- End layout styles -->
+  <!-- <link rel="shortcut icon" href="../assets/images/favicon.png" /> -->
+  <style>
+    body{
+      background: white;
+    }
+    
+    .loading {
+        background: url("{% static 'img/gif1.gif' %}");
+        background-size: cover;
+        width: 300px;
+        height: 200px;
+        margin: 0 auto;
+        display: none; /* Initially hidden */
+    }
+</style>
+
+</head>
+
+<body>
+  <!-- <script src="../assets/js/preloader.js"></script> -->
+  <div>
+    <!-- partial:partials/_sidebar.html -->
+    <aside class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open">
+      <div class="mdc-drawer__header">
+        <a href="#" class="brand-logo">
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="{% static 'img/logo_2_white.png' %}" alt="logo" style="width: 80px;">
+               
+        </a>
+      
+      </div>
+      <div class="mdc-drawer__content">
+        <div class="user-info">
+          <p class="name">
+          <table>
+            <tr>
+              <th>Hi</th>
+              <td>{{request.session.Username}}</td>
+            </tr>
+
+          </table>
+          </p>
+          <!-- <p class="email">xyx@gmail.com</p> -->
+        </div>
+        <div class="mdc-list-group">
+        </div>
+        <div class="profile-actions">
+          <a href="{% url 'logout' %}">
+            <button type="submit">Logout</button>
+          </a>
+        </div>
+
+    </aside>
+
+    <div class="main-wrapper mdc-drawer-app-content">
+
+      <header class="mdc-top-app-bar">
+        <div class="mdc-top-app-bar__row">
+          <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button
+              class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button sidebar-toggler">menu</button>
+            <span class="mdc-top-app-bar__title">
+              <img src="{% static 'img/logo_1.png' %}" alt="logo_pic" style="width: 50px;">
+            </span>
+
+
+            <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end mdc-top-app-bar__section-right">
+              <div class="menu-button-container menu-profile d-none d-md-block">
+                <button class="mdc-button mdc-menu-button">
+                  <span class="d-flex align-items-center">
+                    <span class="figure">
+                      <img src="{% static 'images/faces/icon_profile.png' %}" alt="user">
+                    </span>
+                    <span class="user-name">
+                      <table>
+                        <tr>
+                          <!-- <th>Hi</th> -->
+                          <td>{{request.session.Username}}</td>
+                        </tr>
+
+                      </table>
+                    </span>
+                  </span>
+                </button>
+                <div class="mdc-menu mdc-menu-surface" tabindex="-1">
+                  <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+
+                    <li class="mdc-list-item" role="menuitem">
+                      <div class="item-thumbnail item-thumbnail-icon-only">
+                        <i class="mdi mdi-settings-outline text-primary"></i>
+                      </div>
+                      <div class="item-content d-flex align-items-start flex-column justify-content-center">
+                        <h6 class="item-subject font-weight-normal">
+                          <a href="{% url 'logout' %}">
+                            Logout
+                          </a>
+                        </h6>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+      </header>
+
+
+      <div class="container">
+        <div class="header">
+          <h3>Dr ChefAi</h3>
+        </div>
+
+        <div class="info">
+          <a href="#" target="_blank">
+            <h3>Team GallilioLabs &copy;</h3>
+          </a>
+        </div>
+
+        <div class="chat-container">
+          <div id="chat-log"></div>
+        </div>
+
+        <div class="chat-box" id="response-box">
+          <div id="loading-view" class="loading">
+                 
+              <div class="loading-spinner"></div>
+              <!-- <div class="loading-text">Loading...</div> -->
+          </div>
+      </div>
+
+        <div class="input-container">
+          <input type="text" id="user-input" placeholder="Ask me what recipie you want">
+          <button id="send-button">
+            <i class="fa-solid fa-paper-plane" id="button-icon"></i>
+          </button>
+        </div>
+        
+        <div class="loading-view" id="loading-view"></div> 
+      </div>
+
+
+
+
+
+      <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
+      <script src="{% static 'js1/material.js' %}"></script>
+      <script src="{% static 'js1/misc.js' %}"></script>
+      <script src="{% static 'js1/app.js' %}"></script>
+      
+
+</body>
+
+</html>

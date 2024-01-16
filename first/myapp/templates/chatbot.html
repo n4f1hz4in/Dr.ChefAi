@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <!-- D:\ADiploma\dialy lab work\core module4\projects\Dr.chef ai\first\myapp\static\js1\app.js -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js1/app.js' %}"defer></script>
+    <title>Dr chefAi</title>
+</head>
+
+<body>
+    
+    <center >
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <table>
+            <tr>
+                <th>Hi</th>
+                <td>{{request.session.Username}}</td>
+            </tr>
+            
+        </table>
+        <a href="{% url 'logout' %}">
+        <button type="submit" >Logout</button>
+        </a>
+    </center>
+
+
+    <div class="container">
+        <div class="header">
+            <h3>Dr ChefAi</h3>
+        </div>
+
+        <div class="info">
+            <a href="#" target="_blank">
+                <h3>Team GallilioLabs &copy;</h3>
+            </a>
+        </div>
+
+        <div class="chat-container">
+            <div id="chat-log"></div>
+        </div>
+
+        <div class="chat-box" id="response-box">
+
+
+            <div id="loading-view" class="loading">
+
+                <div class="loading-spinner"></div>
+                <!-- <div class="loading-text">Loading...</div> -->
+            </div>
+            <!-- <div id="response-content"></div> -->
+        </div>
+
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Ask me what recipie you want">
+            <button id="send-button">
+                <i class="fa-solid fa-paper-plane" id="button-icon"></i>
+            </button>
+        </div>
+
+    </div>
+
+
+    
+</body> 
+
+</html>

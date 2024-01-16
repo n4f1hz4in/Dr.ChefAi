@@ -1,0 +1,535 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon_icon.jpg' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/templatemo-festava-live.css' %}" rel="stylesheet">
+<style>
+.text-secondary {
+    color: #3d5d6f;
+  }
+  
+  .h4,
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    color: #333;
+  }
+  
+  .fa,
+  .fas {
+    font-family: 'FontAwesome';
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-style: normal;
+  }
+  
+  .right-0 {
+    right: 0;
+  }
+  
+  .top-0 {
+    top: 0;
+  }
+  
+  .h-100 {
+    height: 100%;
+  }
+  
+  a.text-secondary:focus,
+  a.text-secondary:hover {
+    text-decoration: none;
+    color: #223e28;
+  }
+  
+  #accordion .fa-plus {
+    transition: -webkit-transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+  }
+  
+  #accordion a[aria-expanded=true] .fa-plus {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+    
+</style>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+
+    <!--
+
+TemplateMo 583 Festava Live
+
+https://templatemo.com/tm-583-festava-live
+
+-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: #02000a;">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="{% static 'img/logo_2_white.png' %}" alt="logo_2_pic" style="width: 50px;">
+                
+            </a>
+
+            <a href="{% url 'loginPage' %}" class="btn custom-btn d-lg-none ms-auto me-4">Login</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+                    <li class="nav-item">
+                        <a class="nav-link click-scrolls" href="/">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scrolls" href="{% url 'aboutPage' %}">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scrolls" href="{% url 'faqPage' %}">FAQ</a>
+                    </li>
+
+                    <!-- <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_4">Schedule</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_5">Pricing</a>
+                    </li> -->
+
+                    <!-- <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_6">Contact</a>
+                    </li>
+                </ul> -->
+
+                <a href="{% url 'loginPage' %}" class="btn custom-btn d-lg-block d-none">Login</a>
+            </div>
+        </div>
+    </nav>
+
+<center>
+    <h1 style="color: #fff; font-family: Arial, Helvetica, sans-serif; font-weight: bolder;">Frequently Asked <span style="color: rgb(238, 150, 78);">Questions</span> 
+    </h1>
+    <p>
+    <span style="color: rgb(255, 153, 51);">Dr</span>
+    <span style="color: rgb(255, 255, 255);">Chef</span>
+    <span style="color: rgb(18, 136, 7);">Ai</span>
+</p>
+</center>
+
+
+
+
+<div class="text-center">
+    <!-- <h2 class="mt-5 mb-5">FAQ</h2> -->
+  </div>
+  <section class="container my-5" id="maincontent">
+    <section id="accordion">
+      <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary " aria-controls="faq-17" aria-expanded="false" data-toggle="collapse" href="#faq-17" role="button">
+        <div class="position-relative">
+          <h2 class="h4 m-0 pr-3" style="font-size: 23px; font-weight: bold; color: #d3cccc; font-family: Arial, Helvetica, sans-serif;">
+           What is Dr ChefAi?
+          </h2>
+          <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+            <i class="fa fa-plus"></i>
+          </div>
+        </div>
+      </a>
+      <div class="collapse" id="faq-17" >
+        <div class="card card-body border-0 p-0">
+          <p style="padding: 10px; color: #e0d7d7; background-color: #02000a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: justify;">
+            Dr ChefAi is an advanced artificial intelligence system designed to assist users in
+            creating delicious and nutritious recipes while promoting a healthy diet.
+          
+          
+        </div>
+      </div>
+
+      <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary " aria-controls="faq-18" aria-expanded="false" data-toggle="collapse" href="#faq-18" role="button">
+        <div class="position-relative">
+          <h2 class="h4 m-0 pr-3" style="font-size: 23px; font-weight: bold; color: #d3cccc; font-family: Arial, Helvetica, sans-serif;">
+            How does Dr ChefAi work?
+          </h2>
+          <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+            <i class="fa fa-plus"></i>
+          </div>
+        </div>
+      </a>
+      <div class="collapse" id="faq-18" style="">
+        <div class="card card-body border-0 p-0">
+          <p style="padding: 10px; color: #e0d7d7; background-color:#02000a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: justify">
+            Dr ChefAi uses a combination of machine learning algorithms and a vast database of recipes
+                            and nutritional information to provide personalized recipe suggestions and dietary
+                            recommendations.
+          
+        </div>
+      </div>
+
+      <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary " aria-controls="faq-19" aria-expanded="false" data-toggle="collapse" href="#faq-19" role="button">
+        <div class="position-relative">
+          <h2 class="h4 m-0 pr-3" style="font-size: 23px; font-weight: bold; color: #d3cccc; font-family: Arial, Helvetica, sans-serif;">
+            Can Dr ChefAi accommodate dietary restrictions?
+          </h2>
+          <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+            <i class="fa fa-plus"></i>
+          </div>
+        </div>
+      </a>
+      <div class="collapse" id="faq-19" style="">
+        <div class="card card-body border-0 p-0">
+          <p style="padding: 10px; color: #e0d7d7; background-color:#02000a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: justify">
+            Yes, Dr ChefAi can tailor its recipe suggestions to accommodate various dietary
+                            preferences and restrictions, including vegetarian, vegan, gluten-free, and more.
+          </p>
+        </div>
+      </div>
+
+      <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary  " aria-controls="faq-20" aria-expanded="false" data-toggle="collapse" href="#faq-20" role="button">
+        <div class="position-relative">
+          <h2 class="h4 m-0 pr-3" style="font-size: 23px; font-weight: bold; color: #d3cccc; font-family: Arial, Helvetica, sans-serif;">
+            Does Dr ChefAi provide nutritional information for recipes?
+          </h2>
+          <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+            <i class="fa fa-plus"></i>
+          </div>
+        </div>
+      </a>
+      <div class="collapse" id="faq-20">
+        <div class="card card-body border-0 p-0">
+          <p style="padding: 10px; color: #e0d7d7; background-color: #02000a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: justify">
+            Absolutely Dr ChefAi not only offers recipes but also provides detailed nutritional
+                            information for each recipe, helping users make informed dietary choices.
+          </p>
+        </div>
+      </div>
+
+      <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary  " aria-controls="faq-21" aria-expanded="false" data-toggle="collapse" href="#faq-21" role="button">
+        <div class="position-relative">
+          <h2 class="h4 m-0 pr-3" style="font-size: 23px; font-weight: bold; color: #d3cccc; font-family: Arial, Helvetica, sans-serif;">
+            Can Dr ChefAi suggest meal plans for specific health goals?
+          </h2>
+          <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+            <i class="fa fa-plus"></i>
+          </div>
+        </div>
+      </a>
+      <div class="collapse" id="faq-21">
+        <div class="card card-body border-0 p-0">
+          <p style="padding: 10px; color: #e0d7d7; background-color: #02000a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: justify">
+            Yes, Dr ChefAi can generate customized meal plans to help users achieve specific health
+                            goals, such as weight loss, muscle gain, or managing chronic conditions.
+          </p>
+        </div>
+      </div>
+
+      <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary  " aria-controls="faq-22" aria-expanded="false" data-toggle="collapse" href="#faq-22" role="button">
+        <div class="position-relative">
+          <h2 class="h4 m-0 pr-3" style="font-size: 23px; font-weight: bold; color:#d3cccc; font-family: Arial, Helvetica, sans-serif;">
+            Does Dr ChefAi offer cooking tips and techniques?
+          </h2>
+          <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+            <i class="fa fa-plus"></i>
+          </div>
+        </div>
+      </a>
+      <div class="collapse" id="faq-22">
+        <div class="card card-body border-0 p-0">
+          <p style="padding: 10px; color: #e0d7d7; background-color: #02000a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: justify">
+            Certainly Dr ChefAi not only provides recipes but also offers cooking tips, techniques,
+            and to assist users in preparing meals successfully.
+          </p>
+        </div>
+      </div>
+
+      <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary " aria-controls="faq-17" aria-expanded="false" data-toggle="collapse" href="#faq-23" role="button">
+        <div class="position-relative">
+          <h2 class="h4 m-0 pr-3" style="font-size: 23px; font-weight: bold; color: #d3cccc; font-family: Arial, Helvetica, sans-serif;">
+            Can I save my favorite recipes with Dr ChefAi?
+          </h2>
+          <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+            <i class="fa fa-plus"></i>
+          </div>
+        </div>
+      </a>
+      <div class="collapse" id="faq-23" style="">
+        <div class="card card-body border-0 p-0">
+          <p style="padding: 10px; color: #e0d7d7; background-color: #02000a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: justify">
+            Yes, you can save your favorite recipes within the Dr ChefAi app for easy access in the
+            future.
+          </p>
+        </div>
+      </div>
+      <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary " aria-controls="faq-17" aria-expanded="false" data-toggle="collapse" href="#faq-24" role="button">
+        <div class="position-relative">
+          <h2 class="h4 m-0 pr-3" style="font-size: 23px; font-weight: bold; color: #d3cccc; font-family: Arial, Helvetica, sans-serif;">
+            Is Dr ChefAi continually updated with new recipes and information?
+          </h2>
+          <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+            <i class="fa fa-plus"></i>
+          </div>
+        </div>
+      </a>
+      <div class="collapse" id="faq-24" style="">
+        <div class="card card-body border-0 p-0">
+          <p style="padding: 10px; color: #e0d7d7; background-color: #02000a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: justify">
+            Yes, Dr ChefAi database is regularly updated with new recipes, nutritional data, and the
+            latest culinary trends.
+          </p>
+        </div>
+      </div>
+      <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary " aria-controls="faq-17" aria-expanded="false" data-toggle="collapse" href="#faq-25" role="button">
+        <div class="position-relative">
+          <h2 class="h4 m-0 pr-3" style="font-size: 23px; font-weight: bold; color: #d3cccc; font-family: Arial, Helvetica, sans-serif;">
+            Is Dr ChefAi suitable for beginners in the kitchen?
+          </h2>
+          <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+            <i class="fa fa-plus"></i>
+          </div>
+        </div>
+      </a>
+      <div class="collapse" id="faq-25" style="">
+        <div class="card card-body border-0 p-0">
+          <p style="padding: 10px; color: #e0d7d7; background-color: #02000a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: justify">
+            Absolutely Dr ChefAi offers beginner-friendly recipes and step-by-step instructions for
+            those new to cooking.
+          </p>
+        </div>
+      </div>
+      <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary " aria-controls="faq-17" aria-expanded="false" data-toggle="collapse" href="#faq-26" role="button">
+        <div class="position-relative">
+          <h2 class="h4 m-0 pr-3" style="font-size: 23px; font-weight: bold; color: #d3cccc; font-family: Arial, Helvetica, sans-serif;">
+            Can I search for recipes based on ingredients I already have at home?
+          </h2>
+          <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+            <i class="fa fa-plus"></i>
+          </div>
+        </div>
+      </a>
+      <div class="collapse" id="faq-26" style="">
+        <div class="card card-body border-0 p-0">
+          <p style="padding: 10px; color: #e0d7d7; background-color: #02000a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: justify">
+            Yes, Dr ChefAi allows you to input ingredients you have, and it will suggest recipes you
+            can make with them.
+          </p>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  
+
+
+
+
+
+
+
+
+
+    <footer class="site-footer">
+    <div class="site-footer-top">
+        <div class="container">
+            <div class="row">
+
+                <!-- <div class="col-lg-6 col-12">
+                    <h2 class="text-white mb-lg-0">Festava Live</h2>
+                </div> -->
+
+                <!-- <div class="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
+                    <ul class="social-icon d-flex justify-content-lg-end">
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link">
+                                <span class="bi-twitter"></span>
+                            </a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link">
+                                <span class="bi-apple"></span>
+                            </a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link">
+                                <span class="bi-instagram"></span>
+                            </a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link">
+                                <span class="bi-youtube"></span>
+                            </a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link">
+                                <span class="bi-pinterest"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-12 mb-4 pb-2">
+                <h5 class="site-footer-title mb-3">Links</h5>
+
+                <ul class="site-footer-links">
+                    <li class="site-footer-link-item">
+                        <a href="/" class="site-footer-link">Home</a>
+                    </li>
+
+                    <li class="site-footer-link-item">
+                        <a href="{% url 'aboutPage' %}" class="site-footer-link">About</a>
+                    </li>
+
+                    <li class="site-footer-link-item">
+                        <a href="{% url 'faqPage' %}" class="site-footer-link">FAQ</a>
+                    </li>
+
+                    <!-- <li class="site-footer-link-item">
+                        <a href="#" class="site-footer-link">Schedule</a>
+                    </li>
+
+                    <li class="site-footer-link-item">
+                        <a href="#" class="site-footer-link">Pricing</a>
+                    </li>
+
+                    <li class="site-footer-link-item">
+                        <a href="#" class="site-footer-link">Contact</a>
+                    </li> -->
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                <h5 class="site-footer-title mb-3">Have a question?</h5>
+
+                <p class="text-white d-flex mb-1">
+                    <a href="tel: 090-080-0760" class="site-footer-link">
+                        090-080-0760
+                    </a>
+                </p>
+
+                <p class="text-white d-flex">
+                    <a href="mailto:hello@company.com" class="site-footer-link">
+                        drchefai@gmail.com
+                    </a>
+                </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
+                <h5 class="site-footer-title mb-3">Location</h5>
+
+                <p class="text-white d-flex mt-3 mb-2">
+                    National Skill Training Institute, Hyderabad, Telangana, India</p>
+
+                <a class="link-fx-1 color-contrast-higher mt-3" href="https://www.google.com/maps/place/National+Skill+Training+Institute/@17.4030585,78.5098347,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb99a144bf6705:0xb8446074a37b8752!8m2!3d17.4030534!4d78.5147056!16s%2Fg%2F1tknhxp7?entry=ttu" target="_blank">
+                    <span>Our Maps</span>
+                    <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="16" cy="16" r="15.5"></circle>
+                            <line x1="10" y1="18" x2="16" y2="12"></line>
+                            <line x1="16" y1="12" x2="22" y2="18"></line>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="site-footer-bottom">
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-lg-3 col-12 mt-5">
+                   
+                    <p class="copyright-text">Copyright © 2023 
+                        
+                            <span style="color: rgb(255, 153, 51);">Dr</span>
+                           <span style="color: rgb(255, 255, 255);">Chef</span>
+                           <span style="color: rgb(18, 136, 7);">Ai</span>
+  
+                    </p>
+                    <p class="copyright-text">Distributed by: <a href="#">The Team Galilio</a></p>
+               
+                </div>
+          
+                <div class="col-lg-8 col-12 mt-lg-5">
+                    <ul class="site-footer-links">
+                        <!-- <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Terms &amp; Conditions</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Privacy Policy</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Your Feedback</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+<!--
+
+T e m p l a t e M o
+
+-->
+
+<!-- JAVASCRIPT FILES -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- <script src="{% static 'js/jquery.sticky.js' %}"></script> -->
+<script src="{% static 'js/click-scroll.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

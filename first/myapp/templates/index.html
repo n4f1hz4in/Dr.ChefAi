@@ -1,0 +1,689 @@
+
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dr ChefAi </title>
+
+    <!-- CSS FILES -->
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon_icon.jpg' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/templatemo-festava-live.css' %}" rel="stylesheet">
+<style>
+    a.text_cls{
+        color: white;
+    }
+</style>
+    <!--
+
+TemplateMo 583 Festava Live
+
+https://templatemo.com/tm-583-festava-live
+
+-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <main>
+
+        <!-- <header class="site-header">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12 d-flex flex-wrap">
+                        <p class="d-flex me-4 mb-0">
+                            <i class="bi-person custom-icon me-2"></i>
+                            <strong class="text-dark">Welcome to Music Festival 2023</strong>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </header> -->
+
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="{% static 'img/logo_2_white.png' %}" alt="logo_2_pic" style="width: 50px;">
+                    
+                </a>
+
+                <a href="{% url 'loginPage' %}" class="btn custom-btn d-lg-none ms-auto me-4">Login</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+                        <li class="nav-item">
+                            <a class="nav-link click-scrolls" href="/">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scrolls" href="{% url 'aboutPage' %}">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scrolls" href="{% url 'faqPage' %}">FAQ</a>
+                        </li>
+
+                        <!-- <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_4">Schedule</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_5">Pricing</a>
+                        </li> -->
+
+                        <!-- <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_6">Contact</a>
+                        </li>
+                    </ul> -->
+
+                    <a href="{% url 'loginPage' %}" class="btn custom-btn d-lg-block d-none">Login</a>
+                </div>
+            </div>
+        </nav>
+
+
+        <section class="hero-section" id="section_1">
+            <div class="section-overlay"></div>
+
+            <div class="container d-flex justify-content-center align-items-center">
+                <div class="row">
+
+                    <div class="col-12 mt-auto mb-5 text-center">
+                        <small style="font-size: 16px;">Welcome To </small>
+                        
+                        <!-- <small>Dr Chef AI </small> -->
+                        <h1 class="text-white mb-5" style="font-family: Arial, Helvetica, sans-serif; font-size: 70px; font-weight: bolder;"> Dr Chef AI</h1>
+
+                        <!-- <h4 class="text-white mb-5">
+                            We're diving into the world of 
+                            food recipes with a touch of AI magic.<br>
+                            It's like having your own personal chef 
+                            and nutritionist in one digital package. <br>
+                            Get ready to explore the delicious intersection of taste and tech!</h4> -->
+
+                        <a class="btn custom-btn smoothscroll" href="{% url 'regPage' %}">Create an Account!</a>
+                    </div>
+
+                    <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
+                        <!-- <div class="date-wrap">
+                            <h5 class="text-white">
+                                <i class="custom-icon bi-clock me-2"></i>
+                                10 - 12<sup>th</sup>, Dec 2023
+                            </h5>
+                        </div> -->
+
+                        <!-- <div class="location-wrap mx-auto py-3 py-lg-0">
+                            <h5 class="text-white">
+                                <i class="custom-icon bi-geo-alt me-2"></i>
+                                National Center, United States
+                            </h5>
+                        </div> -->
+
+                        <!-- <div class="social-share">
+                            <ul class="social-icon d-flex align-items-center justify-content-center">
+                                <span class="text-white me-3">Share:</span>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link">
+                                        <span class="bi-facebook"></span>
+                                    </a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link">
+                                        <span class="bi-twitter"></span>
+                                    </a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link">
+                                        <span class="bi-instagram"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-wrap">
+                <video autoplay="" loop="" muted="" class="custom-video" poster="">
+                    <source src="{% static 'img/lemon2.mp4'%}" type="video/mp4">
+
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+
+        <section class="about-section section-padding" id="section_2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                        <div class="services-info">
+                            <h2 class="text-white mb-4">About Dr Chef AI</h2>
+
+                            <p class="text-white">Dr. Chef AI, powered by artificial intelligence, seamlessly combines culinary expertise, nutrition, and health management. It tailors recipe recommendations to individual preferences and dietary needs, offering comprehensive nutritional insights. Beyond recipes, it assists in meal planning, calorie tracking, and managing health conditions with specialized dietary guidance, addressing diseases like diabetes, heart conditions, and more. This platform empowers users to make healthier choices, learn culinary skills, and connect with a supportive food community. It's an essential tool for achieving dietary, culinary, and health-related goals.</p>
+
+                            <h3 class="text-white mt-4">Recipe Recommendations</h3>
+
+                            <p class="text-white">Dr. Chef AI may suggest personalized recipes based on user preferences, dietary restrictions, and available ingredients.</p>
+
+                            <h3 class="text-white mt-4">Nutritional Information</h3>
+
+                            <p class="text-white"> It can provide detailed nutritional information for recipes, helping users make informed choices about their meals.</p>
+
+                            <h3 class="text-white mt-4">Disease-Specific Guidance</h3>
+
+                            <p class="text-white"> For users with specific health conditions or diseases, the AI could recommend recipes and dietary plans tailored to their needs. For example, diabetic-friendly recipes or heart-healthy meal plans.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="about-text-wrap">
+                            <img src="{% static 'img/pic3.jpeg'%}" class="about-image img-fluid">
+
+                            <!-- <div class="about-text-info d-flex"> -->
+                                <!-- <div class="d-flex"> -->
+                                    <!-- <i class="about-text-icon bi-person"></i> -->
+                                <!-- </div> -->
+
+
+                                <!-- <div class="ms-4"> -->
+                                    <!-- <h3>a happy moments</h3> -->
+
+                                    <!-- <p class="mb-0">your amazing festival experience with us</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="artists-section section-padding" id="section_3">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <div class="col-12 text-center">
+                        <h2 class="mb-4">Gallery</h1>
+                    </div>
+
+                    <div class="col-lg-5 col-12">
+                        <div class="artists-thumb">
+                            <div class="artists-image-wrap">
+                                <img src="{% static 'img/biryani.jpg'%}"
+                                    class="artists-image img-fluid">
+                            </div>
+
+                            <div class="artists-hover">
+                            <!-- <center>
+                                <strong></strong>
+                            </center><br> -->
+                                <p>
+                                    <strong>Chicken Biryani:</strong>
+                                    1 kg Chicken
+                                </p>
+
+                                <p>
+                                    <strong>Ingredients:</strong>
+                                    <br>
+                                    3 Bay leaf,1 tsp Chilli powder,2 Onions large, 2 Potatoes large, 5 Eggs,1 1/2 tbsp Ginger-garlic paste,4 cups Basmati rice,1/2 tsp Turmeric powder,1 Salt as per taste,13 Cardamom Green,1 Cardamom large Black,14 Clove,1 Generous pinch Saffron,1 tsp Shahi Jeera,4 tbsp Ghee or oil,2 tsp Kewra water,.
+
+                                </p>
+
+                                <p>
+                                    <strong> Nutritional content:</strong>
+                                    <br>
+                                    Calories: 400-500 calories per 1-cup (240g).<br>
+                                    Protein: 20-25 grams per 1-cup.
+                                    <br>
+                                    Carbohydrates: 50-60 grams per 1-cup.
+                                    <br>
+                                    Fat: 15-20 grams per 1-cup.
+                                    <br>
+                                    Fiber: 2 grams per 1-cup.
+
+
+                                </p>
+
+                                <!-- <hr> -->
+
+                                <!-- <p class="mb-0">
+                                    <strong>Youtube Channel:</strong>
+                                    <a href="#">Madona Official</a>
+                                </p> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-12">
+                        <div class="artists-thumb">
+                            <div class="artists-image-wrap">
+                                <img src="{% static 'img/img5.webp'%}"
+                                    class="artists-image img-fluid">
+                            </div>
+
+                            <div class="artists-hover">
+                                <p>
+                                    <strong>Ragi Chapati:</strong><br>
+                                    Ragi Chapathi is a tasty flat bread made by blending ragi flour with wheat flour in the making of chapathi. Ragi Chapathi is healthy compared to the regular chapathi and relished with spicy chutney / gravy.
+                                </p>
+
+                                <!-- <p>
+                                    <strong>Birthdate:</strong>
+                                    Feb 20, 1988
+                                </p> -->
+<!-- 
+                                <p>
+                                    <strong>Music:</strong>
+                                    Country
+                                </p> -->
+
+                                <!-- <hr> -->
+
+                                <!-- <p class="mb-0"> -->
+                                    <!-- <strong>Youtube Channel:</strong> -->
+                                    <!-- <a href="#">Rihana Official</a> -->
+                                <!-- </p> -->
+                            </div>
+                        </div>
+
+                        <div class="artists-thumb">
+                            <img src="{% static 'img/img6.jpg'%}"
+                                class="artists-image img-fluid">
+
+                            <div class="artists-hover">
+                                <p>
+                                    <strong>Flax Seed Ladoo:</strong><br>
+                                    Flax Seed Ladoo-protein packed, nutritious ladoo made with flax seeds, nuts and jaggery. Healthy Energy Balls!
+
+                                </p>
+
+                                <!-- <p>
+                                    <strong>Birthdate:</strong>
+                                    October 8, 1985
+                                </p> -->
+
+                                <!-- <p>
+                                    <strong>Music:</strong>
+                                    Pop
+                                </p> -->
+
+                                <!-- <hr> -->
+
+                                <!-- <p class="mb-0"> -->
+                                    <!-- <strong>Youtube Channel:</strong> -->
+                                    <!-- <a href="#">Bruno Official</a> -->
+                                <!-- </p> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="schedule-section section-padding" id="section_4">
+            <div class="container">
+                <div class="row">
+
+                    <!-- <div class="col-12 text-center"> -->
+                        <!-- <h2 class="text-white mb-4">Event Schedule</h1> -->
+
+                                <div class="container">
+                            
+                                    <ul class="nav nav-tabs\" class="text_cls" style="padding: 20px;">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                      <li class="active"><a data-toggle="tab" href="#home"class="text_cls" >Recipe Analysis</a></li>
+                                    
+                                      <li><a data-toggle="tab" href="#menu1" class="text_cls">Recipe Management</a></li>
+                                      <li><a data-toggle="tab" href="#menu2" class="text_cls">Meal Planning</a></li>
+                                      <!-- <li><a data-toggle="tab" href="#menu3" class="text_cls">Menu 3</a></li> -->
+                                    </ul>
+                                  <br>
+                                    <div class="tab-content">
+                                      <div id="home" class="tab-pane fade in active">
+                                        <h3>Special Diets/Intolerances</h3>
+                                        <p>We automatically analyze recipes to check for ingredients that contain common allergens, such as wheat, dairy, eggs, soy, nuts, etc. We also determine whether a recipe is vegan, vegetarian, Paleo friendly, Whole30 compliant, and more.</p>
+
+                                        <h3>Nutritional Information</h3>
+                                        <p>We compute the nutritional information for recipes automatically using a proprietary algorithm. With this information, you can find individual recipes or even create entire meal plans that satisfy your users' dietary goals.</p>
+                                      </div>
+                                      <div id="menu1" class="tab-pane fade">
+                                        <h3>Search & Organize</h3>
+                                        <p>We make it easy to add a recipe search to your app or website - and not just any recipe search. Our semantic search is fast, accurate, and pretty darn smart. "Gluten free nut free dessert without apples"? Easy as pie. Or create your own recipe manager without making your users create tons of tags to find what they're looking for next time. It's all possible.
+                                            <br><br>
+
+                                            Have your own recipe database? Great! Let us help you get it under control. With our API, your users will be able to find the recipes they want.
+                                        </p>
+                                      </div>
+                                      <div id="menu2" class="tab-pane fade">
+                                        <h3>Plan your meals</h3>
+                                        <p>Let your users plan their meals for the week using recipes or even your own brand of packaged foods. The daily nutritional information is calculated automatically.</p>
+
+                                        <h3>Get your shopping list</h3>
+                                        <p>Once your users are done meal planning, they can get their shopping list in a click of the mouse.</p>
+                                      </div>
+                                      <div id="menu3" class="tab-pane fade">
+                                        <h3>Menu 3</h3>
+                                        <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="pricing-section section-padding section-bg" id="section_5">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <h2 class="text-center mb-4">Benifits of Dr Chef AI </h2>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <h3><small>Some user-centric plans and features you can consider implementing:</small></h3>
+
+                                    <!-- <p>Generate personalized meal plans based on user profiles and preferences.</p> -->
+                                </div>
+
+                                <!-- <p class="pricing-tag ms-auto">Dr Chef <span></span>AI</h2> -->
+                            </div>
+
+                            <ul class="pricing-list mt-3">
+                                <li class="pricing-list-item">Personalized Meal Plans</li>
+
+                                <li class="pricing-list-item">Recipe Recommendations
+
+                                </li>
+
+                                <li class="pricing-list-item">Nutritional Tracking</li>
+
+                                <li class="pricing-list-item">Health Condition Management</li>
+                            </ul>
+
+                            <a class="link-fx-1 color-contrast-higher mt-4" href="{% url 'loginPage' %}">
+                                <span>more...</span>
+                                <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="16" cy="16" r="15.5"></circle>
+                                        <line x1="10" y1="18" x2="16" y2="12"></line>
+                                        <line x1="16" y1="12" x2="22" y2="18"></line>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mt-4 mt-lg-0">
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <!-- <h3><small></small> </h3> -->
+
+                                    <!-- <p>What makes a premium festava?</p> -->
+                                </div>
+                            </div>
+
+                            <ul class="pricing-list mt-3">
+                                <li class="pricing-list-item">Cooking Tips</li>
+
+                                <li class="pricing-list-item">Disease-Specific Dietary Guidance</li>
+
+                                <li class="pricing-list-item">Weight Management</li>
+
+                                <li class="pricing-list-item">Medication and Diet Interactions</li>
+
+                                <li class="pricing-list-item">Nutritional Strategies</li>
+
+                                <li class="pricing-list-item">Childhood Nutrition</li>
+                                <li class="pricing-list-item">Pregnancy and Nutrition</li>
+                                <li class="pricing-list-item">Digestive Health</li>
+                                <li class="pricing-list-item">Eating Disorders</li>
+                            </ul>
+
+                            <a class="link-fx-1 color-contrast-higher mt-4" href="{% url 'loginPage' %}">
+                                <span>more...</span>
+                                <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="16" cy="16" r="15.5"></circle>
+                                        <line x1="10" y1="18" x2="16" y2="12"></line>
+                                        <line x1="16" y1="12" x2="22" y2="18"></line>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="site-footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <!-- <div class="col-lg-6 col-12">
+                        <h2 class="text-white mb-lg-0">Festava Live</h2>
+                    </div> -->
+
+                    <!-- <div class="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
+                        <ul class="social-icon d-flex justify-content-lg-end">
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-twitter"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-apple"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-instagram"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-youtube"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-pinterest"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-12 mb-4 pb-2">
+                    <h5 class="site-footer-title mb-3">Links</h5>
+
+                    <ul class="site-footer-links">
+                        <li class="site-footer-link-item">
+                            <a href="/" class="site-footer-link">Home</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="{% url 'aboutPage' %}" class="site-footer-link">About</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="{% url 'faqPage' %}" class="site-footer-link">FAQ</a>
+                        </li>
+
+                        <!-- <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Schedule</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Pricing</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Contact</a>
+                        </li> -->
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                    <h5 class="site-footer-title mb-3">Have a question?</h5>
+
+                    <p class="text-white d-flex mb-1">
+                        <a href="tel: 090-080-0760" class="site-footer-link">
+                            090-080-0760
+                        </a>
+                    </p>
+
+                    <p class="text-white d-flex">
+                        <a href="mailto:hello@company.com" class="site-footer-link">
+                            drchefai@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
+                    <h5 class="site-footer-title mb-3">Location</h5>
+
+                    <p class="text-white d-flex mt-3 mb-2">
+                        National Skill Training Institute, Hyderabad, Telangana, India</p>
+
+                    <a class="link-fx-1 color-contrast-higher mt-3" href="https://www.google.com/maps/place/National+Skill+Training+Institute/@17.4030585,78.5098347,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb99a144bf6705:0xb8446074a37b8752!8m2!3d17.4030534!4d78.5147056!16s%2Fg%2F1tknhxp7?entry=ttu" target="_blank">
+                        <span>Our Maps</span>
+                        <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="16" cy="16" r="15.5"></circle>
+                                <line x1="10" y1="18" x2="16" y2="12"></line>
+                                <line x1="16" y1="12" x2="22" y2="18"></line>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="site-footer-bottom">
+            <div class="container">
+                <div class="row">
+                   
+                    <div class="col-lg-3 col-12 mt-5">
+                       
+                        <p class="copyright-text">Copyright © 2023 
+                        
+                            <span style="color: rgb(255, 153, 51);">Dr</span>
+                           <span style="color: rgb(255, 255, 255);">Chef</span>
+                           <span style="color: rgb(18, 136, 7);">Ai</span>
+                       
+                       
+                       
+                    </p>
+
+                        <p class="copyright-text">Distributed by: <a href="#">The Team Galilio</a></p>
+                   
+                    </div>
+              
+                    <div class="col-lg-8 col-12 mt-lg-5">
+                        <ul class="site-footer-links">
+                            <!-- <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Terms &amp; Conditions</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Privacy Policy</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Your Feedback</a>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
+    <!--
+
+T e m p l a t e M o
+
+-->
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'js/click-scroll.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>

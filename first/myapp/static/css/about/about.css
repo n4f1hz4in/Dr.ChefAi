@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans",sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #02000a
+}
+
+/* ... Your existing CSS ... */
+
+.about-section {
+    background: url("{% static 'img/pic4.jpg' %}");
+    background-size: 100%;
+    background-color: #0a0a0a;
+    overflow: hidden;
+    padding: 120px 0px;
+    text-align: center; /* Center content horizontally */
+}
+
+.inner-container {
+    width: 55%;
+    /* Remove 'float: left;' */
+    background-color: transparent;
+    border:  1px solid rgba(200, 200, 200, 0.921);
+    backdrop-filter: blur(10px);
+    padding: 90px;
+    color: white;
+    margin: 0 auto; /* Center the inner container horizontally */
+}
+
+/* ... Your existing CSS ... */
+
+
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+ .text{
+    font-size: 20px;
+    color: white;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+} 
+
+.skills{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.skills:hover{
+    color: orangered;
+    
+}
+
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+        background-color: grey;
+    }
+    .inner-container{
+        width: 100%;
+        
+    }
+}
+
+@media screen and (max-width:600px){
+    .about-section{
+        background-size: 100%;
+        padding: 0;
+    }
+    .inner-container{
+        padding: 60px;
+        color: black;
+    }
+    .inner-container .text{
+        /* padding: 60px; */
+        color: white;
+    }
+}
